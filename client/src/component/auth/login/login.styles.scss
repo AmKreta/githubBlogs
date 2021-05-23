@@ -1,0 +1,37 @@
+@import "../../../globalStyle/constants.scss";
+
+.loginContainer {
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    & > div > form {
+        height: 300px;
+        width: 300px;
+        display: flex;
+        flex-flow: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: space-evenly;
+        border-radius: 10px;
+        border: none !important;
+
+        & > .form-actions {
+            margin-top: 10px;
+        }
+    }
+
+    & > .redirectToSignup {
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+}

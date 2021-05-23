@@ -1,0 +1,61 @@
+@import "../../../globalStyle/constants.scss";
+
+.signupContainer {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: var(--backgroundImage);
+        filter: blur(5px) opacity(90%);
+    }
+
+    & > .backgroundContainer {
+        width: 25%;
+        height: 80%;
+        background-size: cover;
+        backdrop-filter: blur(10px);
+    }
+
+    & > .formContainer {
+        width: 45%;
+        height: 80%;
+        z-index: 1;
+        display: flex;
+        align-items: stretch;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+
+        & > h2 {
+            height: 10%;
+        }
+        & > form {
+            height: 70%;
+        }
+        & > div {
+            height: 10%;
+        }
+    }
+}
+
+@media only screen and( max-width : $medium ) {
+    .signupContainer {
+        & > .backgroundContainer {
+            display: none;
+        }
+        & > .formContainer {
+            width: 90%;
+        }
+    }
+}
