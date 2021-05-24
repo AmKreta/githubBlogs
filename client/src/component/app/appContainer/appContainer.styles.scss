@@ -1,0 +1,20 @@
+@import "../../../globalStyle/constants.scss";
+
+.appContainer {
+    height: 100%;
+    flex-grow: 1;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: $medium) {
+    .appContainer {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: $small) {
+    .appContainer {
+        width: 85%;
+    }
+}

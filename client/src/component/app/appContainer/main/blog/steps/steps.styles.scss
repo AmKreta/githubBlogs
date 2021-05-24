@@ -1,0 +1,26 @@
+//@import "../../../../../../globalStyle/constants.scss";
+
+.stepsContainer {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+
+    & > .steps {
+        width: Min(400px, 100%);
+        margin: 0 auto;
+        & > .step {
+            padding: 2px;
+            border: 1px solid red;
+            height: 400px;
+            & > .title {
+                height: 10%;
+            }
+            & > .content {
+                height: 73%;
+            }
+        }
+    }
+}

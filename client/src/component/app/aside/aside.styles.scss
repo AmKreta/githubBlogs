@@ -1,0 +1,43 @@
+@import "../../../globalStyle/constants.scss";
+
+aside {
+    height: 100%;
+    width: Min(200px, 20%);
+    z-index: 1;
+    position: relative;
+
+    & > nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        justify-content: space-evenly;
+        transition: width 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+
+@media only screen and( max-width : $medium ) {
+    aside {
+        width: 10%;
+        &.expended {
+            & > nav {
+                width: 200px;
+                & > .navItem {
+                    & > p {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and( max-width : $small ) {
+    aside {
+        width: 15%;
+    }
+}

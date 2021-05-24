@@ -1,0 +1,33 @@
+@import "../../../../globalStyle/constants.scss";
+
+header {
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    box-shadow: 0 1px 5px #ccc;
+
+    & > .logo {
+        height: 100%;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    & > svg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: $medium) {
+    header {
+        & > svg {
+            display: block;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

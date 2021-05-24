@@ -1,7 +1,7 @@
 import React from 'react';
 import './progressBar.styles.scss';
 
-const ProgressBar = ({ steps = 1, currentPosition = 0 }) => {
+const ProgressBar = ({ steps = [], currentPosition = 0 }) => {
     return (
         <div className='progressBar'>
             {

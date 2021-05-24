@@ -6,7 +6,7 @@ import Header from './header/header.component';
 import Main from './main/main.component';
 import Footer from './footer/footer.component';
 
-const AuthHome = ({ match }) => {
+const AuthHome = ({ match,history }) => {
     const mainRef = useRef();
     const footerRef = useRef();
 
@@ -21,7 +21,7 @@ const AuthHome = ({ match }) => {
     return (
         <div className="authHome">
             <Header {...{ scrollToMain, scrollToFooter }} />
-            <Main Ref={mainRef} scrollToFooter={scrollToFooter} match={match} />
+            <Main Ref={mainRef} scrollToFooter={scrollToFooter} match={match} history={history}/>
             <Footer Ref={footerRef} scrollToMain={scrollToMain} />
         </div>
     );

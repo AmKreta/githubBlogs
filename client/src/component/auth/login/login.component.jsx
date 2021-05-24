@@ -25,7 +25,6 @@ import { login } from '../../../services/services';
 
 //importing async request
 import AsyncRequest from '../../../asyncRequest/asyncRequest';
-import asyncRequest from '../../../asyncRequest/asyncRequest';
 
 class Login extends Component {
     constructor(props) {

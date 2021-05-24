@@ -1,11 +1,23 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState, useEffect } from 'react';
 import './app.styles.scss';
 
+import Aside from './aside/aside.component';
+import AppContainer from './appContainer/appContainer.component';
+
 const App = () => {
-    const userName = useSelector(state => state.user.userName);
+
+    useEffect(() => {
+        //making app a flex container
+        let app = document.querySelector('.App');
+        app.setAttribute('style', 'display:flex;flex-flow:row nowrap;align-items:stretch;');
+    }, []);
+
+    const [isAsideExpended, setIsAsideExpended] = useState(false);
     return (
-        <div className="amk">feed createBlog chat setting search profile</div>
+        <>
+            <Aside {...{ isAsideExpended }} />
+            <AppContainer {...{ isAsideExpended, setIsAsideExpended }} />
+        </>
     );
 }
 

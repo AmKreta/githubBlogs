@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Switch, useHistory } from 'react-router-dom';
+import { Route, Switch, useHistory, Redirect } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './component.styles.scss';
 
@@ -34,7 +34,10 @@ const Component = () => {
 
     return (
         <Switch>
-            <Route exact path='/' component={App} />
+            <Route exact path='/'>
+                <Redirect to='/app/feed' />
+            </Route>
+            <Route path='/app' component={App} />
             <Route path='/auth' component={Auth} />
         </Switch>
     );
