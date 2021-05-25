@@ -10,6 +10,7 @@ const App = () => {
         //making app a flex container
         let app = document.querySelector('.App');
         app.setAttribute('style', 'display:flex;flex-flow:row nowrap;align-items:stretch;');
+	return ()=>app.setAttribute('style', '');
     }, []);
 
     const [isAsideExpended, setIsAsideExpended] = useState(false);

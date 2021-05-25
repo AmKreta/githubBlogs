@@ -1,0 +1,22 @@
+.editor {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1.3fr 8.7fr;
+    grid-template-columns: 800px auto;
+    grid-template-areas: "editorHeader editorAside" "editorMain editorAside";
+
+    & > .editorHeader {
+        grid-area: editorHeader;
+    }
+
+    & > .editorMain {
+        grid-area: editorMain;
+        outline: none;
+        overflow-y: scroll;
+    }
+
+    & > .editorAside {
+        grid-area: editorAside;
+        border: 1px solid red;
+    }
+}

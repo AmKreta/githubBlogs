@@ -15,9 +15,9 @@ const Blog = ({ match, history }) => {
     const [seo, setSeo] = useState([]);
 
     const goTo = useCallback((page) => {
-        //history.push(`${match.url}/${page}`);
-        setCurrentStage(prevState => prevState <= 2 ? prevState + 1 : 0);
-    }, []);
+        history.push(`${match.path}/${page}`);
+        setCurrentStage(prevState => prevState <= 2 ? prevState + 1 : prevState);
+    }, [history, match.path]);
 
     return (
         <Switch>
