@@ -1,0 +1,23 @@
+.editorAsideToolbar {
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 6.5%;
+    position: sticky;
+    top: 0px;
+
+    & > div {
+        margin: 0 5px;
+        text-transform: capitalize;
+        font-weight:bold;
+
+        &.activeAsideTool {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

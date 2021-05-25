@@ -1,11 +1,17 @@
 import React from 'react';
 import './view.styles.scss'
 
-const View=()=>{
+//importing icons
+import { BsGrid3X3 } from 'react-icons/bs';
+
+const View = () => {
     return (
-        <div className="subToolbar view">
-            <div>grid</div>
-            
+        <div className="primary text subToolbar view">
+            <div>
+                <BsGrid3X3 />
+                <p>grid</p>
+                <input type="checkbox" />
+            </div>
         </div>
     );
 }

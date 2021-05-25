@@ -8,10 +8,10 @@ const EditorHeaderToolbar = ({ activeToolBar, setActiveToolBar }) => {
 
     return (
         <div className="editorHeaderToolbar">
-            <p onClick={clickHandler} className={`${activeToolBar === 'file' ? 'activeToolBar' : null}`}>file</p>
-            <p onClick={clickHandler} className={`${activeToolBar === 'format' ? 'activeToolBar' : null}`}>format</p>
-            <p onClick={clickHandler} className={`${activeToolBar === 'insert' ? 'activeToolBar' : null}`}>insert</p>
-            <p onClick={clickHandler} className={`${activeToolBar === 'view' ? 'activeToolBar' : null}`}>view</p>
+            <p onClick={clickHandler} className={`${activeToolBar === 'file' ? 'primary text activeToolBar' : null}`}>file</p>
+            <p onClick={clickHandler} className={`${activeToolBar === 'format' ? 'primary text activeToolBar' : null}`}>format</p>
+            <p onClick={clickHandler} className={`${activeToolBar === 'insert' ? 'primary text activeToolBar' : null}`}>insert</p>
+            <p onClick={clickHandler} className={`${activeToolBar === 'view' ? 'primary text activeToolBar' : null}`}>view</p>
         </div>
     );
 }

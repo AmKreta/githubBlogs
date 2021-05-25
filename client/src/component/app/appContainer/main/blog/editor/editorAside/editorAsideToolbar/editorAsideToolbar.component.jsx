@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import './editorAsideToolbar.styles.scss';
 
-//importing custom components
-import Layouts from './layouts/layouts.component';
-import Modifire from './modifire/modifire.component';
-import Pages from './pages/pages.component';
-
-const EditorAsideSubToolbar = () => {
+const EditorAsideSubToolbar = ({ activeTool, setActiveTool }) => {
+    const clickHandler = useCallback((e) => {
+        setActiveTool(e.target.innerText.toLowerCase());
+    }, [setActiveTool]);
     return (
-        <div className="editorAsideSubToolbar">
-            <Layouts />
-            <Modifire />
-            <Pages />
+        <div className="editorAsideToolbar">
+            <div
+                onClick={clickHandler}
+                className={`${activeTool === 'layouts' ? 'primary text activeAsideTool' : null}`}
+            >
+                layouts
+            </div>
+            <div
+                onClick={clickHandler}
+                className={`${activeTool === 'modifire' ? 'primary text activeAsideTool' : null}`}
+            >
+                modifire
+            </div>
+            <div
+                onClick={clickHandler}
+                className={`${activeTool === 'pages' ? 'primary text activeAsideTool' : null}`}
+            >
+                pages
+            </div>
         </div>
     );
 }

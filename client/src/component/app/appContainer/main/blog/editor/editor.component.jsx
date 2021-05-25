@@ -8,7 +8,10 @@ import EditorAside from './editorAside/editorAside.component';
 
 const Editor = () => {
     /*const initialState = useMemo(() => ({
-
+        pages:[],
+        activePage:1,
+        activeElement:null,
+        selectedText:null
     }), []);
 
     const reducer = useCallback((state = initialState, action) => {

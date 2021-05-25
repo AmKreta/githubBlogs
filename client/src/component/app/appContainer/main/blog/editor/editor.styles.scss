@@ -4,6 +4,7 @@
     grid-template-rows: 1.3fr 8.7fr;
     grid-template-columns: 800px auto;
     grid-template-areas: "editorHeader editorAside" "editorMain editorAside";
+    grid-gap:2px;
 
     & > .editorHeader {
         grid-area: editorHeader;
@@ -17,6 +18,5 @@
 
     & > .editorAside {
         grid-area: editorAside;
-        border: 1px solid red;
     }
 }
