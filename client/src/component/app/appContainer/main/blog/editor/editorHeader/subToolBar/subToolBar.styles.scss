@@ -1,0 +1,10 @@
+.subToolbar {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &>*{
+        margin:5px;
+    }
+}

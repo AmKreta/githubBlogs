@@ -1,4 +1,4 @@
-import React, { useReducer, useMemo, useCallback } from 'react';
+import React, { /*useReducer, useMemo, useCallback*/ } from 'react';
 import './editor.styles.scss';
 
 //importing custom components
@@ -7,15 +7,15 @@ import EditorMain from './editorMain/editorMain.component';
 import EditorAside from './editorAside/editorAside.component';
 
 const Editor = () => {
-    const initialState = useMemo(() => ({
-       
+    /*const initialState = useMemo(() => ({
+
     }), []);
 
     const reducer = useCallback((state = initialState, action) => {
 
-    }, []);
+    }, [initialState]);
 
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);*/
 
     return (
         <div className="editor">

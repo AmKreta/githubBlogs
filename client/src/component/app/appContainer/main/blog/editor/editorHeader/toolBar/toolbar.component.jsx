@@ -3,7 +3,7 @@ import './toolbar.styles.scss';
 
 const EditorHeaderToolbar = ({ activeToolBar, setActiveToolBar }) => {
     const clickHandler = useCallback((e) => {
-        setActiveToolBar(e.target.innerText);
+        setActiveToolBar(e.target.innerText.toLowerCase());
     }, [setActiveToolBar]);
 
     return (
