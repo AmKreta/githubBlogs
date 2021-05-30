@@ -41,4 +41,4 @@ const Insert = () => {
     );
 }
 
-export default Insert;
+export default React.memo(Insert);

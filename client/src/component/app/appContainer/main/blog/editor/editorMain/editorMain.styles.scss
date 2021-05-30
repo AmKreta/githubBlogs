@@ -1,0 +1,22 @@
+@import "../../../../../../../globalStyle/constants.scss";
+
+@mixin highlight {
+    outline: -webkit-focus-ring-color auto 1px;
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: 1px;
+}
+
+#contentEditableContainer {
+    .dynamicallyAddedElement {
+        display: inline-block;
+        outline: none;
+
+        &:hover {
+            @include highlight();
+        }
+        &.activeDynamicElement {
+            @include highlight();
+        }
+    }
+}

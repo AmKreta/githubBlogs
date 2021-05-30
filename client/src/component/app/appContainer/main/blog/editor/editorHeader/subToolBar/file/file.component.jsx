@@ -23,4 +23,4 @@ const File = () => {
     );
 }
 
-export default File;
+export default React.memo(File);

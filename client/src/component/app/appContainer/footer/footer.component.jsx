@@ -3,7 +3,7 @@ import './footer.styles.scss';
 
 const Footer=()=>{
     return(
-       <footer>
+       <footer className='appContainerFooter'>
            footer
        </footer> 
     )

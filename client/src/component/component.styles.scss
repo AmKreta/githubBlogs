@@ -45,11 +45,15 @@ $Theme: (
             box-shadow: 0 0 5px darken($color, 10%);
         }
         &.paper {
-            --elevation:5px;
+            --elevation: 5px;
             border-bottom-width: 2px;
             border-left-width: 1px;
             border-right-width: 1px;
             box-shadow: 0 1px var(--elevation) darken($color, 20%);
+        }
+        &.centered {
+            display: grid;
+            place-items: center;
         }
     }
 }

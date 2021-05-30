@@ -7,6 +7,7 @@ import SubToolBar from './subToolBar/subToolBar.component';
 
 const EditorHeader = () => {
     const [activeToolBar, setActiveToolBar] = useState('format');
+    
     return (
         <div className="editorHeader">
             <Toolbar {...{ activeToolBar, setActiveToolBar }} />

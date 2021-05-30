@@ -14,7 +14,7 @@ const Header = ({ isAsideExpended, setIsAsideExpended }) => {
     }, [setIsAsideExpended]);
 
     return (
-        <header className='primary text'>
+        <header className='primary text appContainerHeader'>
             <div className="logo">
                 <img className='logoImage' src={Logo} height='40' width='40' alt='logo'/>
                 <h2 className="logotitle">

@@ -12,7 +12,7 @@ import Setting from './setting/setting.component';
 
 const Main = ({ match }) => {
     return (
-        <main>
+        <main className='appMainContainer'>
             <Switch>
                 <Route exact path={`${match.url}/`}>
                     <Redirect to={`${match.path}/feed`} />

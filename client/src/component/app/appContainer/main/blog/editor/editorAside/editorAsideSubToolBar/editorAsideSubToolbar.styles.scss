@@ -1,4 +1,12 @@
 .editorAsideSubToolbar {
     height: 93.5%;
     overflow-y: scroll;
+    font-weight: bold;
+    & > div {
+        text-transform: capitalize;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
 }
