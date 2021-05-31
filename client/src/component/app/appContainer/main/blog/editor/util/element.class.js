@@ -1,33 +1,13 @@
-import { v4 as uuidv4 } from 'uuid';
+import createElement from './elements/createElement';
 import { SET_ACTIVE_ELEMENT } from '../editor.component';
 
-
-const createElement = (type) => {
-    //creating element and adding some text
-    let element = document.createElement('div');
-    element.style['position'] = 'relative';
-    element.contentEditable = 'true';
-    element.style.width = '400px';
-    element.innerText = 'some text';
-
-    let id = uuidv4();
-    element.id = `el-${id}`;
-
-    document.querySelector('.activeDynamicElement')?.classList.remove('activeDynamicElement');
-    element.classList.add('dynamicallyAddedElement');
-    element.classList.add('activeDynamicElement');
-
-    document.querySelector('.editorMain').appendChild(element);
-
-    SET_ACTIVE_ELEMENT(element.id);
-
-    return element;
-}
-
+let Link = 'https://images.unsplash.com/photo-1603993097397-89c963e325c7?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80';
 
 //add function to select resize 
-function Element(type) {
-    let element = createElement(type);
+function Element(type, link = Link) {
+
+    let element = createElement(type, link);
+    SET_ACTIVE_ELEMENT(element.id);
 
     element.addEventListener('click', function (e) {
         e.stopPropagation();
@@ -37,12 +17,7 @@ function Element(type) {
         SET_ACTIVE_ELEMENT(e.target.id);
     });
 
-    /*element.addEventListener('blur', function (e) {
-        element.classList.remove('activeDynamicElement');
-    });*/
-
     element.addEventListener('mouseover', function (e) {
-        //element.style['outline'] = 'black solid 2px';
         element.onpaste = e => {
             e.preventDefault();
             var text = (e.originalEvent || e).clipboardData.getData('text/plain');
@@ -52,11 +27,12 @@ function Element(type) {
     });
 
     element.addEventListener('mouseout', function (e) {
-        //element.style['outline'] = 'none';
         element.onpaste = null;
     });
 
     element.addEventListener('mousedown', function (e) {
+        e.preventDefault();
+        //perform transform operations
         let x = e.clientX;
         let y = e.clientY;
         let key;
@@ -64,6 +40,7 @@ function Element(type) {
             key = event.key;
         }
         e.target.onmousemove = (event) => {
+            event.preventDefault();
             let dx = event.clientX;
             let dy = event.clientY;
             switch (key) {
